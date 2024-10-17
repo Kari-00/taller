@@ -35,16 +35,9 @@ public class Comercial extends Empleado {
         this.comision = comision;
     }
 
+    @Override
     public double calcularSalarioFinal() {
         return this.salario + this.comision;
-    }
-
-    public void incrementarComision(double incremento) {
-        if (incremento > 0) {
-            this.comision += incremento;
-        } else {
-            throw new IllegalArgumentException("El incremento debe ser positivo.");
-        }
     }
 
     @Override

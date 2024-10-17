@@ -1,9 +1,8 @@
 import java.util.Objects;
 
-public abstract class Empleado {
+public abstract class Empleado implements Trabajador {
 
     protected final static double SALARIO_DEF = 600;
-
     protected String nombre;
     protected String apellido;
     protected int edad;
@@ -36,6 +35,7 @@ public abstract class Empleado {
         this.edad = edad;
     }
 
+    @Override
     public double getSalario() {
         return salario;
     }
@@ -47,6 +47,7 @@ public abstract class Empleado {
         this.salario = salario;
     }
 
+    @Override
     public abstract boolean plus(double sueldoPlus);
 
     public Empleado() {
